@@ -1,0 +1,49 @@
+{
+    "api": {
+        "key": "6ZnRtefx5jWFVTTwsgJwQQhMVoSDbuELYjCiocPC",
+        "baseUrl": "https://itch.io/api/1",
+        "endpoints": {
+            "user": "/jwt/me",
+            "games": "/{userId}/games",
+            "gameStats": "/game/{gameId}/stats"
+        }
+    },
+    "user": {
+        "username": "godzcelrs",
+        "profileUrl": "https://godzcelrs.itch.io/"
+    },
+    "settings": {
+        "loadGamesOnStart": true,
+        "showApiStatus": true,
+        "retryAttempts": 3,
+        "retryDelay": 2000,
+        "cacheGames": true,
+        "cacheExpiry": 3600000
+    },
+    "categories": {
+        "games": {
+            "name": "Juegos",
+            "icon": "fas fa-gamepad",
+            "keywords": ["game", "juego", "arcade", "puzzle", "adventure"]
+        },
+        "art": {
+            "name": "Arte 3D",
+            "icon": "fas fa-cube",
+            "keywords": ["art", "3d", "model", "blender", "asset"]
+        },
+        "gamejam": {
+            "name": "Game Jams",
+            "icon": "fas fa-trophy",
+            "keywords": ["jam", "competition", "48h", "72h", "challenge"]
+        }
+    },
+    "display": {
+        "maxGamesPerRow": 3,
+        "showStats": true,
+        "showDescription": true,
+        "showTags": true,
+        "showPlatforms": true,
+        "maxDescriptionLength": 150,
+        "maxTagsToShow": 3
+    }
+}

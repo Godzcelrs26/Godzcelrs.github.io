@@ -1,0 +1,73 @@
+{
+    "personal": {
+        "name": "Lisandro Antonio Feliz Nuñez",
+        "nickname": "Godzcelrs",
+        "age": 22,
+        "location": "Santo Domingo Este, República Dominicana",
+        "education": "Instituto Tecnológico de las Américas (ITLA)",
+        "mainTeam": "Malagueta Games",
+        "profession": "Desarrollador de Videojuegos & Artista Digital"
+    },
+    "social": {
+        "instagram": "https://www.instagram.com/lisandrodev/",
+        "itchio": "https://godzcelrs.itch.io/",
+        "discord": "#",
+        "email": "Godzcelrs@gmail.com"
+    },
+    "skills": {
+        "gamedev": ["Unity", "C#", "Game Design", "Scripting"],
+        "art": ["Blender", "Aseprite", "Texturing", "Animation"],
+        "tools": ["Git", "Trabajo en Equipo", "Game Jams", "Problem Solving"]
+    },
+    "projects": [
+        {
+            "id": 1,
+            "name": "Proyecto Ejemplo 1",
+            "category": "games",
+            "description": "Descripción del primer proyecto de juego",
+            "technologies": ["Unity", "C#"],
+            "image": "placeholder",
+            "links": {
+                "demo": "#",
+                "source": "#"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Arte 3D Ejemplo",
+            "category": "art",
+            "description": "Ejemplo de arte 3D creado en Blender",
+            "technologies": ["Blender", "3D Modeling"],
+            "image": "placeholder",
+            "links": {
+                "view": "#",
+                "download": "#"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Game Jam Project",
+            "category": "gamejam",
+            "description": "Proyecto desarrollado durante una game jam",
+            "technologies": ["Game Jam", "48h"],
+            "image": "placeholder",
+            "links": {
+                "play": "#",
+                "itchio": "#"
+            }
+        }
+    ],
+    "theme": {
+        "primaryColor": "#00ff88",
+        "secondaryColor": "#ff0080",
+        "accentColor": "#00d4ff",
+        "darkMode": true
+    },
+    "features": {
+        "particles": true,
+        "animations": true,
+        "contactForm": true,
+        "projectFilter": true,
+        "responsiveDesign": true
+    }
+}
