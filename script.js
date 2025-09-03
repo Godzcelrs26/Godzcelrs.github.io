@@ -2,12 +2,8 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const filterBtns = document.querySelectorAll('.filter-btn');
-let projectCards = document.querySelectorAll('.project-card'); // Será actualizado dinámicamente
+const projectCards = document.querySelectorAll('.project-card');
 const form = document.querySelector('.contact-form form');
-
-// Global variables for Itch.io integration
-let gamesData = [];
-let apiStatus = 'loading';
 
 // Mobile Navigation Toggle
 hamburger?.addEventListener('click', () => {
@@ -37,74 +33,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Updated Project Filter Functionality - Will be reinitialized after games load
-function initializeProjectFilters() {
-    const currentFilterBtns = document.querySelectorAll('.filter-btn');
-    const currentProjectCards = document.querySelectorAll('.project-card');
-    
-    currentFilterBtns.forEach(btn => {
-        // Remove existing listeners
-        btn.replaceWith(btn.cloneNode(true));
+// Project Filter Functionality
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(button => button.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filterValue = btn.getAttribute('data-filter');
+
+    projectCards.forEach(card => {
+      const categories = (card.getAttribute('data-category') || '').split(/\s+/);
+      const matches = filterValue === 'all' || categories.includes(filterValue);
+      card.style.display = matches ? 'block' : 'none';
+      if (matches) card.style.animation = 'fadeInUp 0.5s ease forwards';
     });
-    
-    // Get fresh references and add new listeners
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons
-            document.querySelectorAll('.filter-btn').forEach(button => button.classList.remove('active'));
-            // Add active class to clicked button
-            btn.classList.add('active');
-            
-            const filterValue = btn.getAttribute('data-filter');
-            
-            document.querySelectorAll('.project-card').forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeInUp 0.5s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-}
-
-// Initialize filters on page load
-initializeProjectFilters();
-
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        navbar.style.backdropFilter = 'blur(20px)';
-    } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    }
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for animation
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
+  });
 });
 
 // Particles background animation
@@ -166,29 +109,71 @@ style.textContent = `
     .particle {
         pointer-events: none;
     }
-    
-    .projects-description {
-        text-align: center;
-        color: var(--text-gray);
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
-    }
-    
-    .itchio-link a {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-    
-    .itchio-link a:hover {
-        color: var(--accent-color);
-    }
 `;
 document.head.appendChild(style);
 
-// Initialize particles
-createParticles();
+// SISTEMA DE DESCRIPCIÓN LIMITADA - VERSION SIMPLIFICADA
+function initProjectDescriptionLimit() {
+    console.log('?? Iniciando sistema de descripción limitada...');
+    
+    const projectDescriptions = document.querySelectorAll('.project-info p');
+    
+    projectDescriptions.forEach((description, index) => {
+        // Evitar procesar si ya tiene botón
+        if (description.parentNode.querySelector('.read-more-btn')) {
+            return;
+        }
+        
+        // Configurar estilos básicos
+        const lineHeight = 24; // Altura fija de línea
+        const maxHeight = lineHeight * 5; // 5 líneas
+        
+        // Medir contenido
+        description.style.maxHeight = 'none';
+        const fullHeight = description.scrollHeight;
+        
+        console.log(`?? Proyecto ${index + 1}: ${fullHeight}px vs ${maxHeight}px`);
+        
+        // Si el contenido es más alto que 5 líneas
+        if (fullHeight > maxHeight + 10) {
+            console.log(`?? Cortando descripción del proyecto ${index + 1}`);
+            
+            // Aplicar límite de altura
+            description.style.maxHeight = maxHeight + 'px';
+            description.style.overflow = 'hidden';
+            description.classList.add('has-overflow');
+            
+            // Crear botón
+            const readMoreBtn = document.createElement('button');
+            readMoreBtn.className = 'read-more-btn';
+            readMoreBtn.textContent = 'Leer m\u00e1s';
+            readMoreBtn.type = 'button';
+            
+            // Insertar botón
+            description.parentNode.insertBefore(readMoreBtn, description.nextSibling);
+            
+            // Funcionalidad del botón
+            let isExpanded = false;
+            readMoreBtn.addEventListener('click', function() {
+                if (isExpanded) {
+                    // Contraer
+                    description.style.maxHeight = maxHeight + 'px';
+                    description.classList.remove('expanded');
+                    this.textContent = 'Leer m\u00e1s';
+                    isExpanded = false;
+                } else {
+                    // Expandir
+                    description.style.maxHeight = fullHeight + 'px';
+                    description.classList.add('expanded');
+                    this.textContent = 'Leer menos';
+                    isExpanded = true;
+                }
+            });
+            
+            console.log(`? Botón agregado al proyecto ${index + 1}`);
+        }
+    });
+}
 
 // Contact form handling
 if (form) {
@@ -196,7 +181,6 @@ if (form) {
         e.preventDefault();
         
         // Get form data
-        const formData = new FormData(form);
         const name = form.querySelector('input[type="text"]').value;
         const email = form.querySelector('input[type="email"]').value;
         const subject = form.querySelectorAll('input[type="text"]')[1].value;
@@ -204,241 +188,34 @@ if (form) {
         
         // Simple validation
         if (!name || !email || !subject || !message) {
-            showNotification('Por favor, completa todos los campos', 'error');
+            alert('Por favor, completa todos los campos');
             return;
         }
         
         // Simulate form submission
-        showNotification('¡Mensaje enviado exitosamente! Te contactaré pronto.', 'success');
+        alert('¡Mensaje enviado exitosamente! Te contactaré pronto.');
         form.reset();
     });
 }
 
-// Notification system
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
+// Inicializar cuando la página esté lista
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('?? Godzcelrs Portfolio - Iniciando...');
     
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
+    // Crear partículas
+    createParticles();
     
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        padding: 15px 25px;
-        border-radius: 10px;
-        color: white;
-        font-weight: 500;
-        z-index: 10000;
-        transform: translateX(400px);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    `;
-    
-    if (type === 'success') {
-        notification.style.background = 'linear-gradient(135deg, #00ff88, #00d4ff)';
-        notification.style.color = '#0a0a0a';
-    } else if (type === 'error') {
-        notification.style.background = 'linear-gradient(135deg, #ff0080, #ff4444)';
-    } else {
-        notification.style.background = 'linear-gradient(135deg, #2a2a2a, #3a3a3a)';
-    }
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
+    // Esperar un momento para que el CSS se aplique
     setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remove after 5 seconds
+        initProjectDescriptionLimit();
+    }, 1000);
+});
+
+// También al cargar completamente
+window.addEventListener('load', function() {
     setTimeout(() => {
-        notification.style.transform = 'translateX(400px)';
-        setTimeout(() => notification.remove(), 300);
-    }, 5000);
-}
-
-// Update API status indicator
-function updateAPIStatus(status, message = '') {
-    const statusElement = document.getElementById('api-status');
-    if (!statusElement) return;
-    
-    apiStatus = status;
-    statusElement.className = `api-status ${status}`;
-    
-    switch (status) {
-        case 'connected':
-            statusElement.innerHTML = '<i class="fas fa-check-circle"></i> Conectado a Itch.io';
-            break;
-        case 'error':
-            statusElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error de conexión';
-            break;
-        case 'loading':
-            statusElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Cargando...';
-            break;
-        default:
-            statusElement.innerHTML = '<i class="fas fa-circle"></i> ' + message;
-    }
-    
-    // Auto-hide after success
-    if (status === 'connected') {
-        setTimeout(() => {
-            statusElement.style.opacity = '0';
-            setTimeout(() => statusElement.style.display = 'none', 300);
-        }, 3000);
-    }
-}
-
-// Update games count in stats
-function updateGamesCount(count) {
-    const gamesCountElement = document.getElementById('games-count');
-    if (gamesCountElement) {
-        gamesCountElement.textContent = count || '0';
-    }
-}
-
-// Typing animation for hero subtitle
-function typeWriter(element, text, speed = 100) {
-    if (!element) return;
-    
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Initialize typing animation
-window.addEventListener('load', () => {
-    const subtitle = document.querySelector('.hero-subtitle');
-    if (subtitle) {
-        const originalText = subtitle.textContent;
-        typeWriter(subtitle, originalText, 80);
-    }
+        initProjectDescriptionLimit();
+    }, 500);
 });
 
-// Skill items hover effect
-document.querySelectorAll('.skill-item').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        const icon = item.querySelector('i');
-        if (icon) {
-            icon.style.transform = 'scale(1.2) rotate(10deg)';
-            icon.style.transition = 'transform 0.3s ease';
-        }
-    });
-    
-    item.addEventListener('mouseleave', () => {
-        const icon = item.querySelector('i');
-        if (icon) {
-            icon.style.transform = 'scale(1) rotate(0deg)';
-        }
-    });
-});
-
-// Project cards animation on scroll - Updated to work with dynamic content
-function initializeProjectAnimations() {
-    const projectObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(50px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        projectObserver.observe(card);
-    });
-}
-
-// Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
-        }
-        element.textContent = Math.floor(current);
-    }, 16);
-}
-
-// Initialize counter animations when stats section is visible
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.stat h4');
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent) || 0;
-                if (target > 0 && counter.id !== 'games-count') {
-                    animateCounter(counter, target);
-                }
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
-
-// Add some interactive effects
-document.addEventListener('mousemove', (e) => {
-    const cursor = document.querySelector('.custom-cursor');
-    if (cursor) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    }
-});
-
-// Smooth page load animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Callback functions for Itch.io integration
-window.onGamesLoaded = function(games) {
-    gamesData = games;
-    updateGamesCount(games.length);
-    updateAPIStatus('connected');
-    initializeProjectFilters();
-    initializeProjectAnimations();
-    console.log(`?? ${games.length} juegos cargados desde Itch.io`);
-};
-
-window.onGamesError = function(error) {
-    updateAPIStatus('error');
-    console.error('? Error al cargar juegos:', error);
-};
-
-console.log('?? Godzcelrs Portfolio - Loaded successfully!');
-console.log('?? Ready to showcase amazing game development projects!');
+console.log('?? Godzcelrs Portfolio - Script cargado!');
