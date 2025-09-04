@@ -9,10 +9,10 @@
         "profession": "Desarrollador de Videojuegos & Artista Digital"
     },
     "social": {
-        "instagram": "#",
-        "itchio": "#",
+        "instagram": "https://www.instagram.com/lisandrodev/",
+        "itchio": "https://godzcelrs.itch.io/",
         "discord": "#",
-        "email": "ejemplo@email.com"
+        "email": "Godzcelrs@gmail.com"
     },
     "skills": {
         "gamedev": ["Unity", "C#", "Game Design", "Scripting"],

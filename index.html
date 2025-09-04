@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godzcelrs</title>
+    <link rel="shortcut icon" href="images/godzcelrs.ico" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="effects.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,12 +15,16 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Godzcelrs</h2>
+                <div class="logo-container">
+                    <img src="images/logo.jpeg" alt="Godzcelrs Logo" class="nav-logo-img">
+                    <h2>Godzcelrs</h2>
+                </div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Sobre Mí</a></li>
                 <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#videos">Videos</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -48,12 +53,43 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <!-- Aquí puedes agregar tu foto de perfil -->
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-gamepad"></i>
+                <div class="featured-project">
+                    <div class="project-header">
+                        <span class="project-label">Proyecto Destacado</span>
+                        <h3 class="project-title">Proyecto Z</h3>
+                        <p class="project-subtitle">Aventura y Supervivencia</p>
+                    </div>
+                    <div class="hero-video-container">
+                        <video 
+                            id="heroVideo" 
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            class="hero-video"
+                            poster="images/videos/proyecto-z-poster.jpg">
+                            <source src="videos/ProyectoZ.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                        <div class="video-overlay" id="videoOverlay">
+                            <button id="playPauseBtn" class="play-pause-btn" aria-label="Pausar/Reproducir video">
+                                <i class="fas fa-pause"></i>
+                            </button>
                         </div>
+                        <div class="project-info-overlay">
+                            <div class="tech-stack">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">3D</span>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-indicator active"></span>
+                                <span class="status-text">En Desarrollo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Un juego de supervivencia en tercera persona donde los jugadores deben sobrevivir en un mundo post-apocalíptico lleno de desafíos y misterios por descubrir.</p>
                     </div>
                 </div>
             </div>
@@ -135,10 +171,10 @@
             
             <div class="projects-grid">
                 <!-- Proyecto 1 - Ejemplo de como agregar tu juego -->
-                <div class="project-card" data-category="gamejam">
+                <div class="project-card" data-category="games gamejam">
                     <div class="project-image">
                         <!-- Reemplaza 'images/tu-juego.jpg' con la ruta de tu imagen -->
-                        <img src="images/gamejams/gamejam4.png" alt="Nombre de tu Juego" class="project-img">
+                        <img src="images/gamejams/gamejam4.png" alt="Ratascuit" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://malagueta-game.itch.io/ratascuit" target="_blank" class="project-link itch-link" title="Ver en Itch.io">
@@ -152,10 +188,10 @@
                     </div>
                     <div class="project-info">
                         <h3>Ratascuit</h3>
-                        <p>Ratascuit is a platformer full of fun and cheesy flavor. Join a brave little rat on his mission to collect as much cheese as possible to feed his family.</p>
+                        <p>Ratascuit es un juego de plataformas lleno de diversión y sabor a queso. Únete a una valiente ratita en su misión de recolectar la mayor cantidad de queso posible para alimentar a su familia.</p>
                         <div class="project-tags">
                             <span class="tag">Malagueta Games</span>
-                            <span class="tag">Team Project</span>
+                            <span class="tag">Proyecto en Equipo</span>
                             <span class="tag">Brackeys Game Jam</span>
                             <span class="tag">Game Jam</span>
                             <span class="tag">Unity</span>
@@ -170,7 +206,7 @@
                 </div>
 
                 <!-- Proyectos de Game Jams -->
-                <div class="project-card" data-category="gamejam">
+                <div class="project-card" data-category="games gamejam">
                     <div class="project-image">
                         <img src="images/gamejams/gamejam2.png" alt="De Parranda" class="project-img">
                         <div class="project-overlay">
@@ -191,7 +227,7 @@
                         </p>
                         <div class="project-tags">
                             <span class="tag">Unknown Games</span>
-                            <span class="tag">Team Project</span>
+                            <span class="tag">Proyecto en Equipo</span>
                             <span class="tag">Glitch & Glory</span>
                             <span class="tag">Game Jam</span>
                             <span class="tag">Unity</span>
@@ -205,7 +241,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="gamejam">
+                <div class="project-card" data-category="games gamejam">
                     <div class="project-image">
                         <img src="images/gamejams/gamejam1.jpg" alt="Trastorno" class="project-img">
                         <div class="project-overlay">
@@ -240,7 +276,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="gamejam">
+                <div class="project-card" data-category="games gamejam">
                     <div class="project-image">
                         <img src="images/gamejams/gamejam3.png" alt="Mud Blaster" class="project-img">
                         <div class="project-overlay">
@@ -257,7 +293,7 @@
                     <div class="project-info">
                         <h3>Mud Blaster</h3>
                         <p>
-                            Mud Blaster is a game with an isometric view and low poly visual style that combines humor and action in an original narrative. The story begins with a carefree protagonist taking a bath, while a meteorite composed of a mud-like material impacts nearby, releasing creatures that parasitize the citizens. When one of these creatures tries to attack him, he accidentally discovers that the shampoo can disintegrate them. With this knowledge, he improvises a bubble gun using bathroom utensils and embarks on a mission to save his city, free the affected citizens, and solve the mystery of the strange meteorite. This game stands out for its creativity, its light tone and its focus on innovative mechanics such as the use of shampoo and bubbles as main weapons. Ideal for those looking for a unique and fun experience.
+                            Mud Blaster es un juego con vista isométrica y estilo visual low poly que combina humor y acción en una narrativa original. La historia comienza con un protagonista despreocupado tomando un baño, mientras un meteorito compuesto de un material similar al barro impacta cerca, liberando criaturas que parasitan a los ciudadanos. Cuando una de estas criaturas trata de atacarlo, descubre accidentalmente que el champú puede desintegrarlas. Con este conocimiento, improvisa una pistola de burbujas usando utensilios de baño y se embarca en una misión para salvar su ciudad, liberar a los ciudadanos afectados y resolver el misterio del extraño meteorito. Este juego se destaca por su creatividad, su tono ligero y su enfoque en mecánicas innovadoras como el uso de champú y burbujas como armas principales. Ideal para quienes buscan una experiencia única y divertida.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Team Project</span>
@@ -273,6 +309,93 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2 class="section-title">Videos & Timelapses</h2>
+            <div class="video-gallery">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/modelo1.mp4" aria-label="Reproducir Modelo 3D">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Modelo 3D - Hidrante</h3>
+                        <p>Un hidrante High-Poly modelado en Blender para una asignación en clase.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/modelo2.mp4" aria-label="Reproducir Timelapse">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Timelapse - Kunai</h3>
+                        <p>Video de proceso acelerado del modelado y texturizado de un Kunai en blender.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/render1.mp4" aria-label="Reproducir Trailer">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Modelo 3D - Render de escena</h3>
+                        <p>Renderizando una escena en blender, con camara.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/FlappyBird.mp4" aria-label="Reproducir Timelapse">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Videojuegos - Flappy Bird</h3>
+                        <p>Gameplay de una versión de Flappy Bird desarrollada por mí.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/ProyectoZ.mp4" aria-label="Reproducir Timelapse">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Videojuegos - Proyecto Z</h3>
+                        <p>Gameplay de un juego desarrollado en equipo.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <!-- Usar miniatura por defecto del video -->
+                        <button type="button" class="play-overlay" data-src="videos/Trastorno.mp4" aria-label="Reproducir Timelapse">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-meta">
+                        <h3>Trailer - Trastorno</h3>
+                        <p>Trailer de Trastorno un juego desarrollado con el equipo de Malagueta Games.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
         </div>
     </section>
 
@@ -373,16 +496,16 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="#" class="social-link instagram" title="Instagram">
+                        <a href="https://www.instagram.com/lisandrodev/" class="social-link instagram" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link itch" title="Itch.io">
+                        <a href="https://godzcelrs.itch.io/" class="social-link itch" title="Itch.io">
                             <i class="fas fa-gamepad"></i>
                         </a>
                         <a href="#" class="social-link discord" title="Discord (Próximamente)">
                             <i class="fab fa-discord"></i>
                         </a>
-                        <a href="#" class="social-link email" title="Email">
+                        <a href="Godzcelrs@gmail.com" class="social-link email" title="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>

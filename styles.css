@@ -53,14 +53,12 @@ body {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
     transition: all 0.3s ease;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,7 +131,7 @@ body {
 
 .hero-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -338,12 +336,12 @@ body {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: 50px 0;
     background: var(--bg-dark-2);
 }
 
 .about-content {
-    display: grid;
+display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
     align-items: center;
@@ -745,10 +743,26 @@ body {
         display: flex;
     }
     
+    .navbar {
+        padding: 1.5rem 0; /* Reducido un poco en móvil pero aún más que el original */
+    }
+    
+    .nav-container {
+        padding: 0 20px 0.5rem 20px; /* Reducido en móvil */
+    }
+    
+    .hero {
+        padding-top: 6rem; /* Reducido en móvil pero aún con separación */
+    }
+    
+    .about {
+        padding: 120px 0; /* Reducido en móvil pero aún más que el original */
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 50px; /* Ajustado para el nuevo tamaño del navbar */
         flex-direction: column;
         background-color: var(--bg-dark);
         width: 100%;
