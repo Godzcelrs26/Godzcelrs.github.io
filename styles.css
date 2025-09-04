@@ -669,6 +669,16 @@ display: grid;
     border-color: #7289da;
 }
 
+.social-link.twitch {
+    color: #9146ff;
+    border-color: #9146ff;
+}
+
+.social-link.youtube {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
 .social-link.email {
     color: var(--primary-color);
     border-color: var(--primary-color);
