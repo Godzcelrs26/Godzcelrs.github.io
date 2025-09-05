@@ -1,3 +1,277 @@
+﻿// Language translations
+const translations = {
+    es: {
+        // Navigation
+        'nav-home': 'Inicio',
+        'nav-about': 'Sobre Mí',
+        'nav-projects': 'Proyectos',
+        'nav-videos': 'Videos',
+        'nav-skills': 'Habilidades',
+        'nav-contact': 'Contacto',
+        
+        // Hero Section
+        'hero-subtitle': 'Desarrollador de Videojuegos & Artista Digital',
+        'hero-description': 'Creando experiencias interactivas únicas y arte digital impactante desde Santo Domingo Este, República Dominicana',
+        'btn-view-projects': 'Ver Proyectos',
+        'btn-contact': 'Contactar',
+        'featured-project': 'Proyecto Destacado',
+        'quick-clip': 'Clip rápido',
+        'kunai-description': 'Video de proceso acelerado del modelado y texturizado de un Kunai en blender.',
+        
+        // About Section
+        'about-title': 'Sobre Mí',
+        'about-greeting': '¡Hola! Soy Lisandro Antonio Feliz Nuñez',
+        'about-paragraph-1': 'Con 22 años de edad, soy un apasionado desarrollador de videojuegos conocido como <strong>Godzcelrs</strong> en la comunidad gaming. Actualmente estudiante en el Instituto Tecnológico de las Américas (ITLA), me especializo en crear experiencias interactivas que combinan narrativa, arte y tecnología.',
+        'about-paragraph-2': 'Mi experiencia abarca desde el desarrollo de videojuegos hasta la creación de contenido artístico en Blender y Aseprite. He participado en múltiples game jams, donde he perfeccionado mis habilidades trabajando bajo presión y en equipos multidisciplinarios.',
+        'about-paragraph-3': 'Formo parte de varios equipos de desarrollo, siendo <strong>Malagueta Games</strong> mi equipo más activo, donde colaboro en proyectos innovadores que buscan redefinir la experiencia de juego.',
+        
+        // About Stats
+        'stat-multiple': 'Multiple',
+        'stat-game-jams': 'Game Jams',
+        'stat-active': 'Activo',
+        'stat-developer': 'Desarrollador',
+        'stat-unity': 'Unity',
+        'stat-specialty': 'Especialidad',
+        'stat-blender': 'Blender',
+        'stat-3d-art': 'Arte 3D',
+        
+        // Projects Section
+        'projects-title': 'Mis Proyectos',
+        'team-project': 'Proyecto en Equipo',
+        'read-more': 'Leer más',
+        'read-less': 'Leer menos',
+        
+        // Project Descriptions
+        'ratascuit-desc': 'Ratascuit es un juego de plataformas lleno de diversión y sabor a queso. Únete a una valiente ratita en su misión de recolectar la mayor cantidad de queso posible para alimentar a su familia.',
+        'de-parranda-desc': 'De Parranda es un juego basado en la cultura dominicana, donde el jugador deberá visitar los puntos más emblemáticos de la República Dominicana, mientras se enfrenta al tráfico en su camino.',
+        'trastorno-desc': 'Trastorno es una entrega para la Game Jam de la Latin American Games Showcase, la cual tiene la temática de la clásica frase: "ojos que no ven, corazón que no siente". Nuestra idea para implementar dicha temática consiste en utilizar la visión del jugador para defenderse de algo que lo oprime: el enemigo en el juego.',
+        'mud-blaster-desc': 'Mud Blaster es un juego con vista isométrica y estilo visual low poly que combina humor y acción en una narrativa original. La historia comienza con un protagonista despreocupado tomando un baño, mientras un meteorito compuesto de un material similar al barro impacta cerca, liberando criaturas que parasitan a los ciudadanos. Cuando una de estas criaturas trata de atacarlo, descubre accidentalmente que el champú puede desintegrarlas. Con este conocimiento, improvisa una pistola de burbujas usando utensilios de baño y se embarca en una misión para salvar su ciudad, liberar a los ciudadanos afectados y resolver el misterio del extraño meteorito. Este juego se destaca por su creatividad, su tono ligero y su enfoque en mecánicas innovadoras como el uso de champú y burbujas como armas principales. Ideal para quienes buscan una experiencia única y divertida.',
+        
+        // Videos Section
+        'videos-title': 'Videos & Timelapses',
+        'videos-subtitle': 'Descubre mi proceso creativo a través de timelapses de modelado 3D y gameplays de mis proyectos',
+        'video-3d-model': 'Modelo 3D',
+        'video-timelapse': 'Timelapse',
+        'video-render': 'Modelo 3D',
+        'video-gameplay': 'Videojuegos',
+        'video-development': 'Videojuegos',
+        'video-trailer': 'Trailer',
+        'hydrant-desc': 'Un hidrante High-Poly modelado en Blender para una asignación en clase.',
+        'kunai-video-desc': 'Video de proceso acelerado del modelado y texturizado de un Kunai en blender.',
+        'scene-render-desc': 'Renderizando una escena en blender, con cámara cinematográfica.',
+        'flappy-bird-desc': 'Gameplay de una versión de Flappy Bird desarrollada por mí en Unity.',
+        'proyecto-z-desc': 'Gameplay de un juego desarrollado en equipo durante una game jam.',
+        'trastorno-trailer-desc': 'Trailer oficial de Trastorno, desarrollado con el equipo de Malagueta Games.',
+        
+        // Skills Section
+        'skills-title': 'Habilidades & Tecnologías',
+        'game-development': 'Desarrollo de Juegos',
+        'art-3d': 'Arte & Modelado 3D',
+        'tools-others': 'Herramientas & Otros',
+        'teamwork': 'Trabajo en Equipo',
+        'problem-solving': 'Problem Solving',
+        
+        // Contact Section
+        'contact-title': 'Conecta Conmigo',
+        'contact-subtitle': '¡Hablemos de proyectos!',
+        'contact-description': 'Siempre estoy abierto a nuevas oportunidades, colaboraciones en proyectos de videojuegos, o simplemente charlar sobre desarrollo y arte digital.',
+        'form-name': 'Tu Nombre',
+        'form-email': 'Tu Email',
+        'form-subject': 'Asunto',
+        'form-message': 'Tu Mensaje',
+        'btn-send': 'Enviar Mensaje',
+        
+        // Footer
+        'footer-description': 'Desarrollador de Videojuegos & Artista Digital',
+        'footer-rights': '© 2024 Lisandro Feliz. Todos los derechos reservados.',
+        
+        // Form validation messages
+        'form-validation': 'Por favor, completa todos los campos',
+        'form-success': '¡Mensaje enviado exitosamente! Te contactaré pronto.'
+    },
+    en: {
+        // Navigation
+        'nav-home': 'Home',
+        'nav-about': 'About Me',
+        'nav-projects': 'Projects',
+        'nav-videos': 'Videos',
+        'nav-skills': 'Skills',
+        'nav-contact': 'Contact',
+        
+        // Hero Section
+        'hero-subtitle': 'Game Developer & Digital Artist',
+        'hero-description': 'Creating unique interactive experiences and impactful digital art from Santo Domingo Este, Dominican Republic',
+        'btn-view-projects': 'View Projects',
+        'btn-contact': 'Contact',
+        'featured-project': 'Featured Project',
+        'quick-clip': 'Quick clip',
+        'kunai-description': 'Time-lapse video of the modeling and texturing process of a Kunai in Blender.',
+        
+        // About Section
+        'about-title': 'About Me',
+        'about-greeting': 'Hello! I\'m Lisandro Antonio Feliz Nuñez',
+        'about-paragraph-1': 'At 22 years old, I\'m a passionate game developer known as <strong>Godzcelrs</strong> in the gaming community. Currently a student at the Instituto Tecnológico de las Américas (ITLA), I specialize in creating interactive experiences that combine narrative, art, and technology.',
+        'about-paragraph-2': 'My experience ranges from game development to creating artistic content in Blender and Aseprite. I have participated in multiple game jams, where I have honed my skills working under pressure and in multidisciplinary teams.',
+        'about-paragraph-3': 'I am part of several development teams, with <strong>Malagueta Games</strong> being my most active team, where I collaborate on innovative projects that seek to redefine the gaming experience.',
+        
+        // About Stats
+        'stat-multiple': 'Multiple',
+        'stat-game-jams': 'Game Jams',
+        'stat-active': 'Active',
+        'stat-developer': 'Developer',
+        'stat-unity': 'Unity',
+        'stat-specialty': 'Specialty',
+        'stat-blender': 'Blender',
+        'stat-3d-art': '3D Art',
+        
+        // Projects Section
+        'projects-title': 'My Projects',
+        'team-project': 'Team Project',
+        'read-more': 'Read more',
+        'read-less': 'Read less',
+        
+        // Project Descriptions
+        'ratascuit-desc': 'Ratascuit is a platform game full of fun and cheese flavor. Join a brave little mouse on her mission to collect as much cheese as possible to feed her family.',
+        'de-parranda-desc': 'De Parranda is a game based on Dominican culture, where the player must visit the most emblematic points of the Dominican Republic, while facing traffic on their way.',
+        'trastorno-desc': 'Trastorno is a submission for the Latin American Games Showcase Game Jam, which has the theme of the classic phrase: "what the eyes don\'t see, the heart doesn\'t feel". Our idea to implement this theme consists of using the player\'s vision to defend against something that oppresses them: the enemy in the game.',
+        'mud-blaster-desc': 'Mud Blaster is a game with isometric view and low poly visual style that combines humor and action in an original narrative. The story begins with a carefree protagonist taking a bath, while a meteorite composed of a mud-like material impacts nearby, releasing creatures that parasitize citizens. When one of these creatures tries to attack him, he accidentally discovers that shampoo can disintegrate them. With this knowledge, he improvises a bubble gun using bathroom utensils and embarks on a mission to save his city, free the affected citizens and solve the mystery of the strange meteorite. This game stands out for its creativity, light tone and focus on innovative mechanics such as the use of shampoo and bubbles as main weapons. Ideal for those looking for a unique and fun experience.',
+        
+        // Videos Section
+        'videos-title': 'Videos & Timelapses',
+        'videos-subtitle': 'Discover my creative process through 3D modeling timelapses and gameplays of my projects',
+        'video-3d-model': '3D Model',
+        'video-timelapse': 'Timelapse',
+        'video-render': '3D Model',
+        'video-gameplay': 'Game',
+        'video-development': 'Game',
+        'video-trailer': 'Trailer',
+        'hydrant-desc': 'A High-Poly fire hydrant modeled in Blender for a class assignment.',
+        'kunai-video-desc': 'Time-lapse video of the modeling and texturing process of a Kunai in Blender.',
+        'scene-render-desc': 'Rendering a scene in Blender, with cinematic camera.',
+        'flappy-bird-desc': 'Gameplay of a Flappy Bird version developed by me in Unity.',
+        'proyecto-z-desc': 'Gameplay of a game developed as a team during a game jam.',
+        'trastorno-trailer-desc': 'Official trailer for Trastorno, developed with the Malagueta Games team.',
+        
+        // Skills Section
+        'skills-title': 'Skills & Technologies',
+        'game-development': 'Game Development',
+        'art-3d': 'Art & 3D Modeling',
+        'tools-others': 'Tools & Others',
+        'teamwork': 'Teamwork',
+        'problem-solving': 'Problem Solving',
+        
+        // Contact Section
+        'contact-title': 'Connect With Me',
+        'contact-subtitle': 'Let\'s talk about projects!',
+        'contact-description': 'I\'m always open to new opportunities, collaborations on game projects, or simply chatting about development and digital art.',
+        'form-name': 'Your Name',
+        'form-email': 'Your Email',
+        'form-subject': 'Subject',
+        'form-message': 'Your Message',
+        'btn-send': 'Send Message',
+        
+        // Footer
+        'footer-description': 'Game Developer & Digital Artist',
+        'footer-rights': '© 2024 Lisandro Feliz. All rights reserved.',
+        
+        // Form validation messages
+        'form-validation': 'Please fill in all fields',
+        'form-success': 'Message sent successfully! I\'ll contact you soon.'
+    }
+};
+
+// Language switching functionality
+let currentLang = 'es';
+
+function changeLanguage(lang) {
+    currentLang = lang;
+    
+    // Update all elements with data-lang-key
+    document.querySelectorAll('[data-lang-key]').forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+    
+    // Update placeholders
+    const nameInput = document.querySelector('input[placeholder*="Nombre"], input[placeholder*="Name"]');
+    const emailInput = document.querySelector('input[type="email"]');
+    const subjectInput = document.querySelector('input[placeholder*="Asunto"], input[placeholder*="Subject"]');
+    const messageTextarea = document.querySelector('textarea');
+    
+    if (nameInput) nameInput.placeholder = translations[lang]['form-name'];
+    if (emailInput) emailInput.placeholder = translations[lang]['form-email'];
+    if (subjectInput) subjectInput.placeholder = translations[lang]['form-subject'];
+    if (messageTextarea) messageTextarea.placeholder = translations[lang]['form-message'];
+    
+    // Update read more/less buttons
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+        const isExpanded = btn.parentNode.querySelector('p').classList.contains('expanded');
+        btn.textContent = isExpanded ? translations[lang]['read-less'] : translations[lang]['read-more'];
+    });
+    
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    
+    // Update document language
+    document.documentElement.lang = lang;
+    
+    // Save language preference
+    localStorage.setItem('preferred-language', lang);
+    
+    // Update form validation messages
+    updateFormValidation(lang);
+}
+
+function updateFormValidation(lang) {
+    if (form) {
+        const originalSubmitHandler = form.onsubmit;
+        form.onsubmit = null;
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const subject = form.querySelectorAll('input[type="text"]')[1].value;
+            const message = form.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert(translations[currentLang]['form-validation']);
+                return;
+            }
+            
+            // Simulate form submission
+            alert(translations[currentLang]['form-success']);
+            form.reset();
+        });
+    }
+}
+
+// Initialize language system
+function initLanguageSystem() {
+    // Check for saved language preference
+    const savedLang = localStorage.getItem('preferred-language') || 'es';
+    
+    // Set up language button event listeners
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            changeLanguage(lang);
+        });
+    });
+    
+    // Apply saved language
+    if (savedLang !== 'es') {
+        changeLanguage(savedLang);
+    }
+}
+
 // DOM Elements
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -112,90 +386,92 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// SISTEMA DE DESCRIPCI�N LIMITADA - VERSION SIMPLIFICADA
+// SISTEMA DE DESCRIPCIÓN LIMITADA - VERSION SIMPLIFICADA
 function initProjectDescriptionLimit() {
-    console.log('?? Iniciando sistema de descripci�n limitada...');
+    console.log('🎮 Iniciando sistema de descripción limitada...');
     
     const projectDescriptions = document.querySelectorAll('.project-info p');
     
     projectDescriptions.forEach((description, index) => {
-        // Evitar procesar si ya tiene bot�n
+        // Evitar procesar si ya tiene botón
         if (description.parentNode.querySelector('.read-more-btn')) {
             return;
         }
         
-        // Configurar estilos b�sicos
-        const lineHeight = 24; // Altura fija de l�nea
-        const maxHeight = lineHeight * 5; // 5 l�neas
+        // Configurar estilos básicos
+        const lineHeight = 24; // Altura fija de línea
+        const maxHeight = lineHeight * 5; // 5 líneas
         
         // Medir contenido
         description.style.maxHeight = 'none';
         const fullHeight = description.scrollHeight;
         
-        console.log(`?? Proyecto ${index + 1}: ${fullHeight}px vs ${maxHeight}px`);
+        console.log(`🎮 Proyecto ${index + 1}: ${fullHeight}px vs ${maxHeight}px`);
         
-        // Si el contenido es m�s alto que 5 l�neas
+        // Si el contenido es más alto que 5 líneas
         if (fullHeight > maxHeight + 10) {
-            console.log(`?? Cortando descripci�n del proyecto ${index + 1}`);
+            console.log(`🎮 Cortando descripción del proyecto ${index + 1}`);
             
-            // Aplicar l�mite de altura
+            // Aplicar límite de altura
             description.style.maxHeight = maxHeight + 'px';
             description.style.overflow = 'hidden';
             description.classList.add('has-overflow');
             
-            // Crear bot�n
+            // Crear botón
             const readMoreBtn = document.createElement('button');
             readMoreBtn.className = 'read-more-btn';
-            readMoreBtn.textContent = 'Leer m\u00e1s';
+            readMoreBtn.textContent = translations[currentLang]['read-more'];
             readMoreBtn.type = 'button';
             
-            // Insertar bot�n
+            // Insertar botón
             description.parentNode.insertBefore(readMoreBtn, description.nextSibling);
             
-            // Funcionalidad del bot�n
+            // Funcionalidad del botón
             let isExpanded = false;
             readMoreBtn.addEventListener('click', function() {
                 if (isExpanded) {
                     // Contraer
                     description.style.maxHeight = maxHeight + 'px';
                     description.classList.remove('expanded');
-                    this.textContent = 'Leer m\u00e1s';
+                    this.textContent = translations[currentLang]['read-more'];
                     isExpanded = false;
                 } else {
                     // Expandir
                     description.style.maxHeight = fullHeight + 'px';
                     description.classList.add('expanded');
-                    this.textContent = 'Leer menos';
+                    this.textContent = translations[currentLang]['read-less'];
                     isExpanded = true;
                 }
             });
             
-            console.log(`? Bot�n agregado al proyecto ${index + 1}`);
+            console.log(`✅ Botón agregado al proyecto ${index + 1}`);
         }
     });
 }
 
 // Contact form handling
-if (form) {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const name = form.querySelector('input[type="text"]').value;
-        const email = form.querySelector('input[type="email"]').value;
-        const subject = form.querySelectorAll('input[type="text"]')[1].value;
-        const message = form.querySelector('textarea').value;
-        
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            alert('Por favor, completa todos los campos');
-            return;
-        }
-        
-        // Simulate form submission
-        alert('�Mensaje enviado exitosamente! Te contactar� pronto.');
-        form.reset();
-    });
+function initContactForm() {
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const subject = form.querySelectorAll('input[type="text"]')[1].value;
+            const message = form.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert(translations[currentLang]['form-validation']);
+                return;
+            }
+            
+            // Simulate form submission
+            alert(translations[currentLang]['form-success']);
+            form.reset();
+        });
+    }
 }
 
 // Update social links with provided user URLs
@@ -255,11 +531,17 @@ document.addEventListener('DOMContentLoaded', () => {
     disableTextareaResizeOnTouch();
 });
 
-// Inicializar cuando la p�gina est� lista
+// Inicializar cuando la página está lista
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('?? Godzcelrs Portfolio - Iniciando...');
+    console.log('🎮 Godzcelrs Portfolio - Iniciando...');
     
-    // Crear part�culas
+    // Initialize language system first
+    initLanguageSystem();
+    
+    // Initialize contact form
+    initContactForm();
+    
+    // Crear partículas
     createParticles();
     
     // Esperar un momento para que el CSS se aplique
@@ -268,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 });
 
-// Tambi�n al cargar completamente
+// También al cargar completamente
 window.addEventListener('load', function() {
     setTimeout(() => {
         initProjectDescriptionLimit();

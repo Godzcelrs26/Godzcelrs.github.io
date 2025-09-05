@@ -21,13 +21,23 @@
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#home" data-lang-key="nav-home">Inicio</a></li>
+                <li><a href="#about" data-lang-key="nav-about">Sobre Mí</a></li>
+                <li><a href="#projects" data-lang-key="nav-projects">Proyectos</a></li>
+                <li><a href="#videos" data-lang-key="nav-videos">Videos</a></li>
+                <li><a href="#skills" data-lang-key="nav-skills">Habilidades</a></li>
+                <li><a href="#contact" data-lang-key="nav-contact">Contacto</a></li>
             </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es">
+                    <img src="https://flagcdn.com/w20/es.png" alt="Español" width="20" height="15">
+                    <span>ES</span>
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <img src="https://flagcdn.com/w20/us.png" alt="English" width="20" height="15">
+                    <span>EN</span>
+                </button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -43,21 +53,21 @@
                 <h1 class="hero-title">
                     <span class="glitch" data-text="Lisandro Feliz">Lisandro Feliz</span>
                 </h1>
-                <h2 class="hero-subtitle">Desarrollador de Videojuegos & Artista Digital</h2>
-                <p class="hero-description">
+                <h2 class="hero-subtitle" data-lang-key="hero-subtitle">Desarrollador de Videojuegos & Artista Digital</h2>
+                <p class="hero-description" data-lang-key="hero-description">
                     Creando experiencias interactivas únicas y arte digital impactante desde Santo Domingo Este, República Dominicana
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    <a href="#projects" class="btn btn-primary" data-lang-key="btn-view-projects">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary" data-lang-key="btn-contact">Contactar</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="featured-project">
                     <div class="project-header">
-                        <span class="project-label">Proyecto Destacado</span>
+                        <span class="project-label" data-lang-key="featured-project">Proyecto Destacado</span>
                         <h3 class="project-title">Timelapse - Kunai</h3>
-                        <p class="project-subtitle">Clip rápido</p>
+                        <p class="project-subtitle" data-lang-key="quick-clip">Clip rápido</p>
                     </div>
                     <div class="hero-video-container">
                         <video 
@@ -85,7 +95,7 @@
                         </div>
                     </div>
                     <div class="project-description">
-                        <p>Video de proceso acelerado del modelado y texturizado de un Kunai en blender.</p>
+                        <p data-lang-key="kunai-description">Video de proceso acelerado del modelado y texturizado de un Kunai en blender.</p>
                     </div>
                 </div>
             </div>
@@ -96,41 +106,41 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mí</h2>
+            <h2 class="section-title" data-lang-key="about-title">Sobre Mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>¡Hola! Soy Lisandro Antonio Feliz Nuñez</h3>
-                    <p>
+                    <h3 data-lang-key="about-greeting">¡Hola! Soy Lisandro Antonio Feliz Nuñez</h3>
+                    <p data-lang-key="about-paragraph-1">
                         Con 22 años de edad, soy un apasionado desarrollador de videojuegos conocido como <strong>Godzcelrs</strong> 
                         en la comunidad gaming. Actualmente estudiante en el Instituto Tecnológico de las Américas (ITLA), 
                         me especializo en crear experiencias interactivas que combinan narrativa, arte y tecnología.
                     </p>
-                    <p>
+                    <p data-lang-key="about-paragraph-2">
                         Mi experiencia abarca desde el desarrollo de videojuegos hasta la creación de contenido artístico 
                         en Blender y Aseprite. He participado en múltiples game jams, donde he perfeccionado mis habilidades 
                         trabajando bajo presión y en equipos multidisciplinarios.
                     </p>
-                    <p>
+                    <p data-lang-key="about-paragraph-3">
                         Formo parte de varios equipos de desarrollo, siendo <strong>Malagueta Games</strong> mi equipo más activo, 
                         donde colaboro en proyectos innovadores que buscan redefinir la experiencia de juego.
                     </p>
                     
                     <div class="stats">
                         <div class="stat">
-                            <h4>Multiple</h4>
-                            <p>Game Jams</p>
+                            <h4 data-lang-key="stat-multiple">Multiple</h4>
+                            <p data-lang-key="stat-game-jams">Game Jams</p>
                         </div>
                         <div class="stat">
-                            <h4>Activo</h4>
-                            <p>Desarrollador</p>
+                            <h4 data-lang-key="stat-active">Activo</h4>
+                            <p data-lang-key="stat-developer">Desarrollador</p>
                         </div>
                         <div class="stat">
-                            <h4>Unity</h4>
-                            <p>Especialidad</p>
+                            <h4 data-lang-key="stat-unity">Unity</h4>
+                            <p data-lang-key="stat-specialty">Especialidad</p>
                         </div>
                         <div class="stat">
-                            <h4>Blender</h4>
-                            <p>Arte 3D</p>
+                            <h4 data-lang-key="stat-blender">Blender</h4>
+                            <p data-lang-key="stat-3d-art">Arte 3D</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +171,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
+            <h2 class="section-title" data-lang-key="projects-title">Mis Proyectos</h2>
             
             <div class="projects-grid">
                 <!-- Proyecto 1 - Ejemplo de como agregar tu juego -->
@@ -176,10 +186,10 @@
                     </div>
                     <div class="project-info">
                         <h3>Ratascuit</h3>
-                        <p>Ratascuit es un juego de plataformas lleno de diversión y sabor a queso. Únete a una valiente ratita en su misión de recolectar la mayor cantidad de queso posible para alimentar a su familia.</p>
+                        <p data-lang-key="ratascuit-desc">Ratascuit es un juego de plataformas lleno de diversión y sabor a queso. Únete a una valiente ratita en su misión de recolectar la mayor cantidad de queso posible para alimentar a su familia.</p>
                         <div class="project-tags">
                             <span class="tag">Malagueta Games</span>
-                            <span class="tag">Proyecto en Equipo</span>
+                            <span class="tag" data-lang-key="team-project">Proyecto en Equipo</span>
                             <span class="tag">Brackeys Game Jam</span>
                             <span class="tag">Game Jam</span>
                             <span class="tag">Unity</span>
@@ -187,7 +197,7 @@
                         <div class="project-stats">
                             <span class="stat-item">
                                 <i class="fas fa-users"></i>
-                                <span>Proyecto en Equipo</span>
+                                <span data-lang-key="team-project">Proyecto en Equipo</span>
                             </span>
                         </div>
                     </div>
@@ -205,12 +215,12 @@
                     </div>
                     <div class="project-info">
                         <h3>De Parranda</h3>
-                        <p>
+                        <p data-lang-key="de-parranda-desc">
                             De Parranda es un juego basado en la cultura dominicana, donde el jugador devera visitar los puntos mas emblematicos de la republica dominicana, mientras se enfrenta al trafico en su camino.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Unknown Games</span>
-                            <span class="tag">Proyecto en Equipo</span>
+                            <span class="tag" data-lang-key="team-project">Proyecto en Equipo</span>
                             <span class="tag">Glitch & Glory</span>
                             <span class="tag">Game Jam</span>
                             <span class="tag">Unity</span>
@@ -218,7 +228,7 @@
                         <div class="project-stats">
                             <span class="stat-item">
                                 <i class="fas fa-users"></i>
-                                <span>Proyecto en Equipo</span>
+                                <span data-lang-key="team-project">Proyecto en Equipo</span>
                             </span>
                         </div>
                     </div>
@@ -235,7 +245,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Trastorno</h3>
-                        <p>
+                        <p data-lang-key="trastorno-desc">
                             Trastorno es una entrega para la Game Jam de la Latin American Games Showcase, la cual tiene la temática de la clásica frase: "ojos que no ven, corazón que no siente". Nuestra idea para implementar dicha temática consiste en utilizar la visión del jugador para defenderse de algo que lo oprime: el enemigo en el juego.
                         </p>
                         <div class="project-tags">
@@ -248,7 +258,7 @@
                         <div class="project-stats">
                             <span class="stat-item">
                                 <i class="fas fa-users"></i>
-                                <span>Proyecto en Equipo</span>
+                                <span data-lang-key="team-project">Proyecto en Equipo</span>
                             </span>
                         </div>
                     </div>
@@ -265,7 +275,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Mud Blaster</h3>
-                        <p>
+                        <p data-lang-key="mud-blaster-desc">
                             Mud Blaster es un juego con vista isométrica y estilo visual low poly que combina humor y acción en una narrativa original. La historia comienza con un protagonista despreocupado tomando un baño, mientras un meteorito compuesto de un material similar al barro impacta cerca, liberando criaturas que parasitan a los ciudadanos. Cuando una de estas criaturas trata de atacarlo, descubre accidentalmente que el champú puede desintegrarlas. Con este conocimiento, improvisa una pistola de burbujas usando utensilios de baño y se embarca en una misión para salvar su ciudad, liberar a los ciudadanos afectados y resolver el misterio del extraño meteorito. Este juego se destaca por su creatividad, su tono ligero y su enfoque en mecánicas innovadoras como el uso de champú y burbujas como armas principales. Ideal para quienes buscan una experiencia única y divertida.
                         </p>
                         <div class="project-tags">
@@ -276,7 +286,7 @@
                         <div class="project-stats">
                             <span class="stat-item">
                                 <i class="fas fa-users"></i>
-                                <span>Proyecto en Equipo</span>
+                                <span data-lang-key="team-project">Proyecto en Equipo</span>
                             </span>
                         </div>
                     </div>
@@ -288,8 +298,8 @@
     <!-- Videos Section -->
     <section id="videos" class="videos">
         <div class="container">
-            <h2 class="section-title">Videos & Timelapses</h2>
-            <p class="section-subtitle">Descubre mi proceso creativo a través de timelapses de modelado 3D y gameplays de mis proyectos</p>
+            <h2 class="section-title" data-lang-key="videos-title">Videos & Timelapses</h2>
+            <p class="section-subtitle" data-lang-key="videos-subtitle">Descubre mi proceso creativo a través de timelapses de modelado 3D y gameplays de mis proyectos</p>
             
             <div class="video-gallery">
                 <div class="video-card">
@@ -299,11 +309,11 @@
                                 <i class="fas fa-play"></i>
                             </button>
                         </div>
-                        <div class="video-category">Modelado 3D</div>
+                        <div class="video-category">3D Model</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Modelo 3D - Hidrante</h3>
-                        <p>Un hidrante High-Poly modelado en Blender para una asignación en clase.</p>
+                        <h3><span data-lang-key="video-3d-model">Modelo 3D</span> - Hidrante</h3>
+                        <p data-lang-key="hydrant-desc">Un hidrante High-Poly modelado en Blender para una asignación en clase.</p>
                         <div class="video-tags">
                             <span class="video-tag">Blender</span>
                             <span class="video-tag">3D Modeling</span>
@@ -322,8 +332,8 @@
                         <div class="video-category">Timelapse</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Timelapse - Kunai</h3>
-                        <p>Video de proceso acelerado del modelado y texturizado de un Kunai en blender.</p>
+                        <h3><span data-lang-key="video-timelapse">Timelapse</span> - Kunai</h3>
+                        <p data-lang-key="kunai-video-desc">Video de proceso acelerado del modelado y texturizado de un Kunai en blender.</p>
                         <div class="video-tags">
                             <span class="video-tag">Blender</span>
                             <span class="video-tag">Timelapse</span>
@@ -342,8 +352,8 @@
                         <div class="video-category">Render</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Modelo 3D - Render de escena</h3>
-                        <p>Renderizando una escena en blender, con cámara cinematográfica.</p>
+                        <h3><span data-lang-key="video-render">Modelo 3D</span> - Render de escena</h3>
+                        <p data-lang-key="scene-render-desc">Renderizando una escena en blender, con cámara cinematográfica.</p>
                         <div class="video-tags">
                             <span class="video-tag">Blender</span>
                             <span class="video-tag">Rendering</span>
@@ -362,8 +372,8 @@
                         <div class="video-category">Gameplay</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Videojuegos - Flappy Bird</h3>
-                        <p>Gameplay de una versión de Flappy Bird desarrollada por mí en Unity.</p>
+                        <h3><span data-lang-key="video-gameplay">Videojuegos</span> - Flappy Bird</h3>
+                        <p data-lang-key="flappy-bird-desc">Gameplay de una versión de Flappy Bird desarrollada por mí en Unity.</p>
                         <div class="video-tags">
                             <span class="video-tag">Unity</span>
                             <span class="video-tag">C#</span>
@@ -379,11 +389,11 @@
                                 <i class="fas fa-play"></i>
                             </button>
                         </div>
-                        <div class="video-category">Desarrollo</div>
+                        <div class="video-category">Development</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Videojuegos - Proyecto Z</h3>
-                        <p>Gameplay de un juego desarrollado en equipo durante una game jam.</p>
+                        <h3><span data-lang-key="video-development">Videojuegos</span> - Proyect Z</h3>
+                        <p data-lang-key="proyecto-z-desc">Gameplay de un juego desarrollado en equipo durante una game jam.</p>
                         <div class="video-tags">
                             <span class="video-tag">Unity</span>
                             <span class="video-tag">Team Project</span>
@@ -402,8 +412,8 @@
                         <div class="video-category">Trailer</div>
                     </div>
                     <div class="video-meta">
-                        <h3>Trailer - Trastorno</h3>
-                        <p>Trailer oficial de Trastorno, desarrollado con el equipo de Malagueta Games.</p>
+                        <h3><span data-lang-key="video-trailer">Trailer</span> - Trastorno</h3>
+                        <p data-lang-key="trastorno-trailer-desc">Trailer oficial de Trastorno, desarrollado con el equipo de Malagueta Games.</p>
                         <div class="video-tags">
                             <span class="video-tag">Malagueta Games</span>
                             <span class="video-tag">Trailer</span>
@@ -418,10 +428,10 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Habilidades & Tecnologías</h2>
+            <h2 class="section-title" data-lang-key="skills-title">Habilidades & Tecnologías</h2>
             <div class="skills-content">
                 <div class="skills-category">
-                    <h3>Desarrollo de Juegos</h3>
+                    <h3 data-lang-key="game-development">Desarrollo de Juegos</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fab fa-unity"></i>
@@ -443,7 +453,7 @@
                 </div>
 
                 <div class="skills-category">
-                    <h3>Arte & Modelado 3D</h3>
+                    <h3 data-lang-key="art-3d">Arte & Modelado 3D</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fas fa-cube"></i>
@@ -465,7 +475,7 @@
                 </div>
 
                 <div class="skills-category">
-                    <h3>Herramientas & Otros</h3>
+                    <h3 data-lang-key="tools-others">Herramientas & Otros</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fab fa-git-alt"></i>
@@ -473,7 +483,7 @@
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-users"></i>
-                            <span>Trabajo en Equipo</span>
+                            <span data-lang-key="teamwork">Trabajo en Equipo</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-clock"></i>
@@ -481,7 +491,7 @@
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-lightbulb"></i>
-                            <span>Problem Solving</span>
+                            <span data-lang-key="problem-solving">Problem Solving</span>
                         </div>
                     </div>
                 </div>
@@ -492,11 +502,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Conecta Conmigo</h2>
+            <h2 class="section-title" data-lang-key="contact-title">Conecta Conmigo</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>¡Hablemos de proyectos!</h3>
-                    <p>
+                    <h3 data-lang-key="contact-subtitle">¡Hablemos de proyectos!</h3>
+                    <p data-lang-key="contact-description">
                         Siempre estoy abierto a nuevas oportunidades, colaboraciones en proyectos
                         de videojuegos, o simplemente charlar sobre desarrollo y arte digital.
                     </p>
@@ -536,18 +546,18 @@
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <input type="text" placeholder="Tu Nombre" required>
+                            <input type="text" placeholder="Tu Nombre" data-lang-placeholder="form-name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Tu Email" required>
+                            <input type="email" placeholder="Tu Email" data-lang-placeholder="form-email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Asunto" required>
+                            <input type="text" placeholder="Asunto" data-lang-placeholder="form-subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tu Mensaje" required></textarea>
+                            <textarea placeholder="Tu Mensaje" data-lang-placeholder="form-message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary" data-lang-key="btn-send">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -560,10 +570,10 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <h3>Godzcelrs</h3>
-                    <p>Desarrollador de Videojuegos & Artista Digital</p>
+                    <p data-lang-key="footer-description">Desarrollador de Videojuegos & Artista Digital</p>
                 </div>
                 <div class="footer-right">
-                    <p>&copy; 2024 Lisandro Feliz. Todos los derechos reservados.</p>
+                    <p data-lang-key="footer-rights">&copy; 2024 Lisandro Feliz. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
