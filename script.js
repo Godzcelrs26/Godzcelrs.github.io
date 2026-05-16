@@ -480,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const itchLink = document.querySelector('.social-link.itch');
     const emailLink = document.querySelector('.social-link.email');
 
-    if (instagramLink) instagramLink.href = 'https://www.instagram.com/lisandrodev/';
+    if (instagramLink) instagramLink.href = 'https://www.instagram.com/godzcelrsdev/';
     if (itchLink) itchLink.href = 'https://godzcelrs.itch.io/';
     if (emailLink) emailLink.href = 'mailto:Godzcelrs@gmail.com';
 });
